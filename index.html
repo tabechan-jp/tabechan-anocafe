@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ano.café（アノ カフェ）｜仙台・国分町の夜カフェ＆バー</title>
+<meta name="description" content="仙台市青葉区国分町、勾当台公園駅から徒歩3分。「昼からBarやってます。夜までcafeやってます。」がコンセプトの隠れ家「ano.café」。サイフォンコーヒーと自家製スイーツ、夜はカクテルを。全13席。Google口コミ51件・★4.5。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --main:#3a2417; --main-dark:#211209; --gold:#cf9b52; --gold-deep:#a8742a; --cream:#f7f1e7; --ink:#2e2620; --gray:#7a6a5c;
+  --card:#ffffff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);background:var(--cream);line-height:1.8;font-size:16px;padding-bottom:74px}
+img{max-width:100%;display:block}
+.sample-band{position:fixed;top:0;left:0;right:0;z-index:60;background:#222;color:#fff;font-size:12px;text-align:center;padding:6px 10px;letter-spacing:.04em}
+.watermark{position:fixed;inset:0;z-index:55;pointer-events:none;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.watermark span{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:22vw;color:rgba(58,36,23,.05);transform:rotate(-18deg);white-space:nowrap}
+header.site{position:sticky;top:29px;z-index:50;background:rgba(247,241,231,.95);backdrop-filter:blur(6px);border-bottom:3px solid var(--main)}
+.header-in{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:10px 16px}
+.logo{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:21px;color:var(--main-dark);letter-spacing:.02em}
+.logo small{display:block;font-size:11px;color:var(--gray);font-weight:700;letter-spacing:.14em}
+.tel-btn{background:var(--main);color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:9px 16px;border-radius:999px}
+.hero{position:relative;background:#170d06;color:#fff}
+.hero img{width:100%;height:62vh;min-height:340px;object-fit:cover;opacity:.94}
+.hero-txt{position:absolute;inset:auto 0 0 0;padding:56px 20px 26px;background:linear-gradient(transparent,rgba(18,9,3,.88) 55%)}
+.hero-in{max-width:960px;margin:0 auto}
+.hero .catch{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:clamp(25px,6.2vw,42px);line-height:1.4;text-shadow:0 2px 10px rgba(0,0,0,.45)}
+.hero .catch .g{color:var(--gold)}
+.hero .sub{margin-top:8px;font-size:15px;opacity:.95}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.badge{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.5);border-radius:999px;padding:5px 13px;font-size:13px;font-weight:700}
+.badge b{color:var(--gold)}
+.status-line{max-width:960px;margin:0 auto;padding:14px 20px 0}
+.status{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--main);color:var(--main-dark);font-weight:700;font-size:14px;border-radius:10px;padding:8px 14px}
+.status .dot{width:10px;height:10px;border-radius:50%;background:#2e9e4f}
+.status.closed .dot{background:#b0a49c}
+.status-note{font-size:12px;color:var(--gray);margin-top:6px}
+.stats{max-width:960px;margin:0 auto;padding:18px 20px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.stat{background:#fff;border-radius:12px;padding:14px 8px;text-align:center;box-shadow:0 3px 12px rgba(60,35,15,.07)}
+.stat .num{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:24px;color:var(--main-dark);line-height:1.2}
+.stat .num small{font-size:13px}
+.stat .lbl{font-size:12px;color:var(--gray);font-weight:700;margin-top:2px}
+section{max-width:960px;margin:0 auto;padding:44px 20px 6px}
+h2{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:24px;color:var(--main-dark);margin-bottom:6px}
+h2 .en{display:block;font-size:11px;letter-spacing:.22em;color:var(--gold-deep);font-weight:900}
+.lead{color:var(--gray);font-size:15px;margin-bottom:20px}
+.reasons{display:grid;gap:14px}
+@media(min-width:700px){.reasons{grid-template-columns:repeat(3,1fr)}}
+.reason{background:var(--card);border-radius:14px;padding:20px 18px;box-shadow:0 3px 14px rgba(60,35,15,.08);border-top:5px solid var(--gold)}
+.reason h3{font-size:17px;font-weight:700;margin-bottom:6px;color:var(--ink)}
+.reason p{font-size:14px;color:var(--gray)}
+.menu-grid{display:grid;gap:18px}
+@media(min-width:700px){.menu-grid{grid-template-columns:repeat(2,1fr)}}
+.menu-card{background:var(--card);border-radius:16px;overflow:hidden;box-shadow:0 4px 16px rgba(60,35,15,.10)}
+.menu-card img{width:100%;height:210px;object-fit:cover}
+.menu-body{padding:16px 18px 18px}
+.menu-name{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:18px}
+.no1{display:inline-block;background:var(--main);color:#fff;font-size:11px;font-weight:700;border-radius:6px;padding:2px 8px;margin-left:6px;vertical-align:middle}
+.price{color:var(--main);font-weight:800;font-size:19px;margin:4px 0 6px}
+.price small{font-size:12px;color:var(--gray);font-weight:500}
+.menu-desc{font-size:14px;color:var(--gray)}
+.note{font-size:12px;color:var(--gray);margin-top:12px}
+.price-table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 3px 14px rgba(60,35,15,.07);margin-top:18px}
+.price-table caption{text-align:left;font-weight:700;font-size:15px;padding:0 2px 8px;color:var(--main-dark)}
+.price-table td{padding:11px 16px;font-size:15px;border-bottom:1px solid #efe6d8}
+.price-table tr:last-child td{border-bottom:none}
+.price-table td.p{text-align:right;font-weight:700;color:var(--main-dark);white-space:nowrap}
+.floor-grid{display:grid;gap:18px}
+@media(min-width:700px){.floor-grid{grid-template-columns:repeat(2,1fr)}}
+.guide{background:#fff;border:2px dashed var(--gold);border-radius:16px;padding:20px}
+.guide ol{margin-left:20px;font-size:15px}
+.guide li{margin-bottom:6px}
+.news{background:#fff;border-radius:14px;padding:6px 20px;box-shadow:0 3px 14px rgba(60,35,15,.07)}
+.news li{list-style:none;padding:13px 0;border-bottom:1px solid #efe6d8;font-size:15px}
+.news li:last-child{border-bottom:none}
+.news .tag{display:inline-block;background:var(--gold);color:#4a3208;font-size:11px;font-weight:700;border-radius:6px;padding:2px 8px;margin-right:8px}
+.ig-banner{display:flex;align-items:center;gap:16px;background:linear-gradient(120deg,#211209,#4a2c17);color:#fff;border-radius:16px;padding:22px;text-decoration:none}
+.ig-banner .t{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:19px}
+.ig-banner .s{font-size:13px;opacity:.92}
+.ig-banner .arrow{margin-left:auto;font-size:26px;font-weight:800}
+.info-table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 3px 14px rgba(60,35,15,.07)}
+.info-table th,.info-table td{padding:13px 16px;font-size:15px;text-align:left;border-bottom:1px solid #efe6d8;vertical-align:top}
+.info-table th{width:32%;background:#f3e8d8;color:var(--main-dark);font-weight:700;white-space:nowrap}
+.info-table tr:last-child th,.info-table tr:last-child td{border-bottom:none}
+.map-btn{display:block;text-align:center;background:var(--ink);color:#fff;text-decoration:none;font-weight:700;border-radius:12px;padding:14px;margin-top:16px}
+.gaikan{border-radius:16px;overflow:hidden;margin-top:18px;box-shadow:0 4px 16px rgba(60,35,15,.10)}
+.gaikan img{width:100%;height:230px;object-fit:cover}
+.gaikan figcaption{font-size:12px;color:var(--gray);background:#fff;padding:8px 14px}
+footer{background:#1d1109;color:#e8dccb;margin-top:52px;padding:34px 20px 30px}
+.foot-in{max-width:960px;margin:0 auto;font-size:13px}
+.foot-in .fname{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:18px;color:#fff;margin-bottom:8px}
+.foot-in a{color:var(--gold)}
+.foot-note{margin-top:16px;font-size:11px;color:#b3a08c;line-height:1.7}
+.action-bar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1fr 1fr;background:#fff;border-top:1px solid #e9dfcf;box-shadow:0 -4px 16px rgba(40,22,8,.10)}
+.action-bar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;padding:9px 4px 10px;text-decoration:none;color:var(--ink);font-size:12px;font-weight:700}
+.action-bar a.main{background:var(--main);color:#fff}
+.action-bar .ic{font-size:19px;line-height:1}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="sample-band">これはサンプルです。無断使用は禁止しています</div>
+<div class="watermark" aria-hidden="true"><span>SAMPLE</span></div>
+
+<header class="site">
+  <div class="header-in">
+    <div class="logo">ano.café<small>EVENING BAR &amp; NIGHT CAFE｜仙台・国分町</small></div>
+    <a class="tel-btn" href="tel:0227972886">☎ 電話する</a>
+  </div>
+</header>
+
+<div class="hero">
+  <img src="hero.webp" alt="ano.caféのテーブルに並ぶワインとケーキと本">
+  <div class="hero-txt">
+    <div class="hero-in">
+      <p class="catch">昼から<span class="g">Bar</span>やってます。<br>夜まで<span class="g">cafe</span>やってます。</p>
+      <p class="sub">evening bar &amp; night cafe ano.café（アノ カフェ）― 仙台・国分町、勾当台公園駅から徒歩3分。ビルの2階にある、全13席の隠れ家です</p>
+      <div class="badges">
+        <span class="badge">Google口コミ <b>51件・★4.5</b></span>
+        <span class="badge">勾当台公園駅 <b>徒歩3分</b></span>
+        <span class="badge">全<b>13席</b>の小さな隠れ家</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="status-line">
+  <span class="status" id="status"><span class="dot"></span><span id="status-text">営業時間を確認中…</span></span>
+  <p class="status-note">※日曜・祝日は定休日です（祝日の場合、表示が実際と異なることがあります）。</p>
+</div>
+
+<div class="stats">
+  <div class="stat"><p class="num">★4.5</p><p class="lbl">Google評価</p></div>
+  <div class="stat"><p class="num">51<small>件</small></p><p class="lbl">Google口コミ</p></div>
+  <div class="stat"><p class="num">13<small>席</small></p><p class="lbl">全席数</p></div>
+</div>
+
+<section class="reveal">
+  <h2><span class="en">CONCEPT</span>ano.caféについて</h2>
+  <p class="lead">昼はカフェ、夜はバー。その枠にとらわれず、いつでも自由に過ごせる場所です。</p>
+  <div class="reasons">
+    <div class="reason">
+      <h3>ビルの2階の、隠れ家</h3>
+      <p>国分町の一角、ビルの2階にひっそりと店を構えています。街の喧騒から少し離れて過ごせる、全13席だけの小さな空間です。</p>
+    </div>
+    <div class="reason">
+      <h3>昼カフェ、夜バー</h3>
+      <p>昼はランチとカフェ、夜はバーとして。お酒を片手にのんびり過ごす昼下がりも、夜にコーヒーとケーキでほっとひと息つく時間も、どちらも楽しめます。</p>
+    </div>
+    <div class="reason">
+      <h3>お一人様・バー初心者歓迎</h3>
+      <p>バーと言っても堅苦しい雰囲気ではなく、カフェのような感覚で気軽に立ち寄れます。バー初心者の方や、女性のお一人様にもおすすめのお店です。</p>
+    </div>
+  </div>
+</section>
+
+<section class="reveal">
+  <h2><span class="en">MENU</span>メニュー</h2>
+  <p class="lead">時間帯ごとに変わる、ano.caféの楽しみ方。</p>
+  <div class="menu-grid">
+    <div class="menu-card">
+      <img src="curry.webp" alt="スパイス香るカレー" loading="lazy">
+      <div class="menu-body">
+        <p class="menu-name">スパイス香るカレー<span class="no1">ランチ</span></p>
+        <p class="menu-desc">ランチタイム（火〜金 12:00〜15:00）の看板は、スパイス香るカレー。魯肉飯やタコライス、パスタランチなど、しっかりお腹を満たせる手作りメニューが揃います。ランチタイムは全席禁煙です。</p>
+      </div>
+    </div>
+    <div class="menu-card">
+      <img src="siphon.webp" alt="サイフォンで淹れるコーヒー" loading="lazy">
+      <div class="menu-body">
+        <p class="menu-name">サイフォンコーヒー</p>
+        <p class="menu-desc">サイフォンで丁寧に淹れるコーヒー。炎のゆらめきとともに香りが立ちのぼる、淹れる時間ごと味わえる一杯です。</p>
+      </div>
+    </div>
+    <div class="menu-card">
+      <img src="tea.webp" alt="自家製スイーツと紅茶" loading="lazy">
+      <div class="menu-body">
+        <p class="menu-name">自家製スイーツと紅茶</p>
+        <p class="menu-desc">夜カフェのお楽しみは自家製スイーツ。コーヒーや紅茶を味わいながら、心休まる贅沢な時間をどうぞ。</p>
+      </div>
+    </div>
+    <div class="menu-card">
+      <img src="bar.webp" alt="オリジナルカクテル" loading="lazy">
+      <div class="menu-body">
+        <p class="menu-name">オリジナルカクテル<span class="no1">バー</span></p>
+        <p class="menu-desc">ビールやウイスキー、オリジナルカクテルに、コーヒー・紅茶をベースにしたドリンクまで幅広く。「一人で軽く飲みたい」夜にも、カフェ感覚で寄れるバーです。</p>
+      </div>
+    </div>
+  </div>
+  <table class="price-table">
+    <caption>コーヒー豆のテイクアウト（100gあたり・税込）</caption>
+    <tr><td>ロイヤルブレンド</td><td class="p">900円</td></tr>
+    <tr><td>マイルドブレンド</td><td class="p">800円</td></tr>
+  </table>
+  <p class="note">※コーヒー豆以外の価格は、店頭のメニューでご確認ください。写真：ano.café公式サイトより。</p>
+</section>
+
+<section class="reveal">
+  <h2><span class="en">SPACE</span>店内とお席</h2>
+  <p class="lead">全13席。過ごし方に合わせて選べる、2つの席タイプ。</p>
+  <div class="floor-grid">
+    <div class="menu-card">
+      <img src="counter.webp" alt="カウンター席" loading="lazy">
+      <div class="menu-body">
+        <p class="menu-name">カウンター席<span class="no1">5席</span></p>
+        <p class="menu-desc">バー使いにおすすめの席。落ち着いた雰囲気の中、店主との会話も楽しめます。15時からは喫煙も可能です。</p>
+      </div>
+    </div>
+    <div class="menu-card">
+      <img src="table.webp" alt="テーブル席" loading="lazy">
+      <div class="menu-body">
+        <p class="menu-name">テーブル席<span class="no1">8席</span></p>
+        <p class="menu-desc">カフェ利用や、ちょっとしたお集まりに。ソファー席もご用意しています。</p>
+      </div>
+    </div>
+  </div>
+  <figure class="gaikan">
+    <img src="drip.webp" alt="店内のコーヒー器具" loading="lazy">
+    <figcaption>店内に佇むコーヒーの器具。写真：ano.café公式サイトより</figcaption>
+  </figure>
+</section>
+
+<section class="reveal">
+  <h2><span class="en">GUIDE</span>初めての方へ</h2>
+  <p class="lead">ご来店前に知っておくと安心なこと。</p>
+  <div class="guide">
+    <ol>
+      <li>勾当台公園駅から徒歩3分。熊谷ビル1F左側に階段への入口があり、2階へお上がりいただきます（立て看板が目印です）</li>
+      <li>ランチタイム（火〜金 12:00〜15:00）は全席禁煙。15時以降はカウンター席のみ喫煙可です</li>
+      <li>お支払いはクレジットカード・電子マネー各種に対応しています</li>
+      <li>駐車場はありません。近隣のコインパーキングをご利用ください</li>
+      <li>臨時休業など最新の情報は、Instagramでご確認ください</li>
+    </ol>
+  </div>
+</section>
+
+<section class="reveal">
+  <h2><span class="en">NEWS</span>お知らせ</h2>
+  <ul class="news">
+    <li><span class="tag">営業</span>営業時間は曜日ごとに異なります。月・土は14:00開店、金・土は23:00まで営業しています</li>
+    <li><span class="tag">定休日</span>日曜日・祝日は定休日です。臨時休業などの最新情報はInstagramでお知らせしています</li>
+    <li><span class="tag">ランチ</span>ランチタイム（火〜金 12:00〜15:00）は全席禁煙です</li>
+  </ul>
+</section>
+
+<section class="reveal">
+  <a class="ig-banner" href="https://www.instagram.com/ano.cafe_sendai/" target="_blank" rel="noopener">
+    <div>
+      <p class="t">Instagramで最新情報をチェック</p>
+      <p class="s">@ano.cafe_sendai ― 営業時間・臨時休業のお知らせはこちらから</p>
+    </div>
+    <span class="arrow">›</span>
+  </a>
+</section>
+
+<section class="reveal" id="access">
+  <h2><span class="en">ACCESS</span>店舗情報</h2>
+  <table class="info-table">
+    <tr><th>店名</th><td>evening bar &amp; night cafe ano.café（アノ カフェ）</td></tr>
+    <tr><th>住所</th><td>〒980-0803 宮城県仙台市青葉区国分町3-6-17 熊谷ビル2F</td></tr>
+    <tr><th>アクセス</th><td>仙台市地下鉄南北線「勾当台公園駅」より徒歩3分</td></tr>
+    <tr><th>電話</th><td><a href="tel:0227972886">022-797-2886</a></td></tr>
+    <tr><th>営業時間</th><td>月 14:00〜22:00（L.O.21:15）<br>火〜木 12:00〜22:00（L.O.21:15）<br>金 12:00〜23:00（L.O.22:15）<br>土 14:00〜23:00（L.O.22:15）<br>ランチタイム（火〜金）12:00〜15:00</td></tr>
+    <tr><th>定休日</th><td>日曜日・祝日</td></tr>
+    <tr><th>席数</th><td>13席（カウンター5席・テーブル8席、ソファー席あり）</td></tr>
+    <tr><th>お支払い</th><td>クレジットカード可／電子マネー各種可</td></tr>
+    <tr><th>駐車場</th><td>なし（近隣にコインパーキングあり）</td></tr>
+    <tr><th>喫煙</th><td>ランチタイムは全席禁煙／15時以降はカウンター席のみ可</td></tr>
+    <tr><th>Instagram</th><td><a href="https://www.instagram.com/ano.cafe_sendai/" target="_blank" rel="noopener">@ano.cafe_sendai</a></td></tr>
+  </table>
+  <a class="map-btn" href="https://www.google.com/maps/search/?api=1&amp;query=ano.caf%C3%A9+%E4%BB%99%E5%8F%B0+%E5%9B%BD%E5%88%86%E7%94%BA" target="_blank" rel="noopener">Googleマップで経路を見る</a>
+</section>
+
+<footer>
+  <div class="foot-in">
+    <p class="fname">evening bar &amp; night cafe ano.café</p>
+    <p>〒980-0803 宮城県仙台市青葉区国分町3-6-17 熊谷ビル2F<br>
+    TEL <a href="tel:0227972886">022-797-2886</a>／Instagram <a href="https://www.instagram.com/ano.cafe_sendai/" target="_blank" rel="noopener">@ano.cafe_sendai</a></p>
+    <p class="foot-note">※このページはサンプルです。無断使用は禁止しています。<br>
+    掲載情報は、お店の公式サイト等の公開情報をもとに作成しています。営業時間などの最新情報は、お店に直接ご確認ください。<br>
+    写真：ano.café公式サイトより。</p>
+  </div>
+</footer>
+
+<nav class="action-bar">
+  <a class="main" href="tel:0227972886"><span class="ic">☎</span>電話する</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=ano.caf%C3%A9+%E4%BB%99%E5%8F%B0+%E5%9B%BD%E5%88%86%E7%94%BA" target="_blank" rel="noopener"><span class="ic">📍</span>経路案内</a>
+  <a href="https://www.instagram.com/ano.cafe_sendai/" target="_blank" rel="noopener"><span class="ic">📷</span>Instagram</a>
+</nav>
+
+<script>
+(function(){
+  // 営業時間（曜日別）: [開店, 閉店] 分換算。日曜は定休日（祝日も定休日だが判定不可のため注記で対応）
+  var HOURS = {
+    0: null,          // 日
+    1: [14*60, 22*60],  // 月
+    2: [12*60, 22*60],  // 火
+    3: [12*60, 22*60],  // 水
+    4: [12*60, 22*60],  // 木
+    5: [12*60, 23*60],  // 金
+    6: [14*60, 23*60]   // 土
+  };
+  function fmt(m){ return Math.floor(m/60) + ':' + ('0' + (m % 60)).slice(-2); }
+  var now = new Date();
+  var mins = now.getHours()*60 + now.getMinutes();
+  var h = HOURS[now.getDay()];
+  var el = document.getElementById('status');
+  var tx = document.getElementById('status-text');
+  var open = false, msg = '';
+  if(!h){ msg = '本日は定休日です（日曜・祝日）'; }
+  else if(mins < h[0]){ msg = '本日は ' + fmt(h[0]) + ' から営業します'; }
+  else if(mins < h[1]){ open = true; msg = '営業中です（〜' + fmt(h[1]) + '）'; }
+  else { msg = '本日の営業は終了しました'; }
+  tx.textContent = msg;
+  if(!open){ el.classList.add('closed'); }
+  // スクロールでふわっと表示
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } });
+  },{threshold:.08});
+  document.querySelectorAll('.reveal').forEach(function(s){ io.observe(s); });
+})();
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"evening bar & night cafe ano.café","servesCuisine":"カフェ・バー","telephone":"022-797-2886","address":{"@type":"PostalAddress","postalCode":"980-0803","addressRegion":"宮城県","addressLocality":"仙台市青葉区","streetAddress":"国分町3-6-17 熊谷ビル2F"},"openingHours":["Mo 14:00-22:00","Tu-Th 12:00-22:00","Fr 12:00-23:00","Sa 14:00-23:00"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.5","reviewCount":"51"}}
+</script>
+</body>
+</html>
